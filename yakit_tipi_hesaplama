@@ -1,0 +1,28 @@
+"""
+1 - Bi aracın yakıt tipine göre (benzin, dizel, lpg) belirtilen bir mesafede ne kadar yakıt masrafı olduğunu hesaplayan uygulamayı yapınız.
+benzin   : 39.35
+dizel    : 41.71
+lpg      : 20.28
+"""
+benzinFiyat = 39.35
+dizelFiyat = 41.71
+lpgFiyat = 20.28
+
+toplamYakitUcreti = 0
+ortalamaYakitTuketimi = float(input("Aracınızın 100 km'de ortalama yakıt tüketimini giriniz (litre): "))
+gidilecekMesafe = float(input("Gidilecek mesafeyi giriniz (km): "))
+yakitTipi = input("Yakıt tipini giriniz (benzin/dizel/lpg): ").lower()
+
+toplamYakitTuketimi = (ortalamaYakitTuketimi / 100) * gidilecekMesafe
+
+if yakitTipi == "benzin":
+    toplamYakitUcreti = toplamYakitTuketimi * benzinFiyat
+    print(f"Toplam yakıt ücreti: {toplamYakitUcreti:.2f} TL")
+elif yakitTipi == "dizel":
+    toplamYakitUcreti = toplamYakitTuketimi * dizelFiyat
+    print(f"Toplam yakıt ücreti: {toplamYakitUcreti:.2f} TL")
+elif yakitTipi == "lpg":
+    toplamYakitUcreti = toplamYakitTuketimi * lpgFiyat
+    print(f"Toplam yakıt ücreti: {toplamYakitUcreti:.2f} TL")
+else:
+    print("Geçersiz yakıt tipi girdiniz.")
