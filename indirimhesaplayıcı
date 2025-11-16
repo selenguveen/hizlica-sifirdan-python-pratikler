@@ -1,0 +1,14 @@
+"""
+Proje 3 : İndirim Hesaplayıcı
+- Kullanıcıdan ürün fiyatı ve indirim yüzdesini al.
+- Aritmetik ve atama operatörleriyle indirimli fiyatı hesapla.
+"""
+
+urunfiyat = float(input("Ürün fiyatını giriniz: "))
+indirimyuzde = float(input("İndirim yüzdesini giriniz: "))
+
+indirimmiktar = urunfiyat * (indirimyuzde / 100)
+urunfiyat -= indirimmiktar
+
+print("Ürünün fiyatı", urunfiyat)
+print("İndirimin miktarı", indirimmiktar)
