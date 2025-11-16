@@ -1,0 +1,10 @@
+"""
+Proje 4 : Şifre Doğrulama Sistemi
+- `==` ve `!=` operatörlerini kullanarak
+kullanıcıdan alınan şifrenin kayıtlı şifreyle eşleşip eşleşmediğini kontrol et.
+"""
+
+şifre_kayıtlı = "guven123"
+şifre_girilen = input("Şifrenizi giriniz: ")
+sonuc = (şifre_girilen == şifre_kayıtlı)
+print(f"Şifre doğru mu? : {sonuc}")
