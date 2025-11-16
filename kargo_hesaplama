@@ -1,0 +1,19 @@
+"""
+Proje 6 : Kargo Ücreti Hesaplama
+- Ürün ağırlığına göre koşul oluştur:
+ 0-1 kg → 20 TL
+ 1-5 kg → 35 TL
+ 5 kg üzeri → 50 TL
+- Kullanıcıdan ağırlık alıp ücretini hesapla.
+"""
+
+agırlık = float(input("Ürün ağırlığını kg cinsinden giriniz: "))
+if agırlık <= 1:
+    kargo_ucret = 20
+    print("Kargo ücreti:", kargo_ucret)
+elif agırlık <= 5:
+    kargo_ucret = 35
+    print("Kargo ücreti:", kargo_ucret)
+else:
+    kargo_ucret = 50
+    print("Kargo ücreti:", kargo_ucret)
