@@ -1,0 +1,40 @@
+"""
+Mini Market Uygulaması
+- Ürün listesi oluştur (listeler)
+- Ürün seçimi ve fiyat hesabı (operatörler)
+- Toplam tutara göre indirim uygulama (koşullar)
+"""
+
+urunler = ["Elma", "Armut", "Muz", "Çilek", "Karpuz"]
+fiyatlar = [3.5, 4.0, 2.5, 5.0, 7.0]
+toplam_tutar = 0.0
+
+print("Mini Market'e Hoşgeldiniz!")
+print("Ürün Listesi:")
+for i in range(len(urunler)):
+    print(f"{i+1}. {urunler[i]} - {fiyatlar[i]} TL")
+
+while True:
+    secim = input("Lütfen almak istediğiniz ürünün numarasını giriniz (Çıkmak için q): ")
+
+    if secim.lower() == 'q':
+        break  # döngüden çık
+    if not secim.isdigit():
+        print("Lütfen geçerli bir sayı giriniz.")
+        continue
+
+    secim = int(secim)
+    if 1 <= secim <= len(urunler):
+        toplam_tutar += fiyatlar[secim - 1]  # operatör: +=
+        print(f"{urunler[secim - 1]} sepete eklendi.  Toplam: {toplam_tutar:.2f} TL")
+    else:
+        print("Geçersiz ürün numarası!")
+
+if toplam_tutar > 50:
+    indirim = toplam_tutar * 0.1
+    toplam_tutar -= indirim
+    print(f"\n 50 TL üzeri alışverişlerde %10 indirim uygulandı!")
+    print(f"İndirim miktarı: {indirim:.2f} TL")
+
+print(f"\n Ödemeniz gereken toplam tutar: {toplam_tutar:.2f} TL")
+print("Teşekkürler, yine bekleriz!")
