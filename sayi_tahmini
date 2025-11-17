@@ -1,0 +1,13 @@
+#kolay rastgele oluşturulmuş sayı tahmin oyunu kodu.
+
+import random
+rastgele_sayi = random.randint(1, 100)
+tahmin = None
+while tahmin != rastgele_sayi:
+    tahmin = int(input("1-100 arasında bir sayı tahmin ediniz: "))
+    if tahmin < rastgele_sayi:
+        print("Daha yüksek bir sayı deneyin.")
+    elif tahmin > rastgele_sayi:
+        print("Daha düşük bir sayı deneyin.")
+    else:
+        print("Tebrikler! Doğru tahmin ettiniz.")
